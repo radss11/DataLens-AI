@@ -100,22 +100,3 @@ Then restart Streamlit.
 pytest -q
 ```
 
-## Interview talking points
-
-- Why separate deterministic analytics from the LLM?
-- Why not send the entire dataframe to the model?
-- How do you prevent hallucinated numbers?
-- How would you handle a 10 GB dataset?
-- How would you add SQL generation safely?
-- How would you add RAG over company policies?
-- How would you evaluate groundedness and answer quality?
-- How would you deploy the service behind an API gateway?
-
-## Production evolution
-
-1. Replace local CSV processing with a governed warehouse/lakehouse.
-2. Add a semantic layer for business metrics.
-3. Add SQL generation with AST/query validation and read-only credentials.
-4. Add document RAG using an enterprise vector store.
-5. Add authentication, audit logging, observability, and prompt/response evaluation.
-6. Containerize and deploy behind FastAPI/API Gateway.
